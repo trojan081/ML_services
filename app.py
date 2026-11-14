@@ -50,3 +50,6 @@ st.header('Это загруженный датасет')
 # CSV в датафрейм
 df = pd.read_csv('data/food_delivery.csv')
 st.write(df)
+
+
+st.write('test_for_commit')
