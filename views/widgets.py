@@ -15,21 +15,6 @@ st.set_page_config(
 df = pd.read_csv('data/food_delivery.csv')
 st.markdown('## Виджеты')
 
-# #_________________ Кнопка ___________
-
-# st.markdown('### Кнопки')
-
-
-
-
-
-#_________________ Input number ___________
-
-
-#_________________ Флажок (checkbox) ___________
-
-
-
 
 
 # #_________________ Выпадающие списки (selectbox) ___________
@@ -62,18 +47,22 @@ df_filter_4 = df[[filter_4]]
 if not df_filter_4.empty:
     st.line_chart(df_filter_4)
 
-
+# ____________ САЙДБАР (боковая панель)
 with st.sidebar:
+    # Кнопка
     st.markdown('### Button')
     button_show_random_cutomers = st.button('Показать 3 случайных клиентов')
 
+    # Ввод числа
     st.markdown('### Ввод числа')
     age = st.number_input('Возраст:', 18, 60, 25)
 
+    # Чекбокс (флажок)
     st.markdown('### Флажок (checkbox)')
     st.write('Флажок')
     filter_1 = st.checkbox(f'Только старше {age}') # Возвращает значение
 
+    # Слайдер
     st.markdown('### Слайдер')
     bottom, top = st.slider('Возраст', 18, 60, (20, 25)) 
 
